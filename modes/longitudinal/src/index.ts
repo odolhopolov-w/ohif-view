@@ -131,6 +131,7 @@ function modeFactory({ modeConfiguration }) {
       ]);
 
       toolbarService.updateSection('MeasurementTools', [
+        'Angle',
         'Length',
         'Bidirectional',
         'ArrowAnnotate',
@@ -153,7 +154,6 @@ function modeFactory({ modeConfiguration }) {
         'invert',
         'Probe',
         'Cine',
-        'Angle',
         'CobbAngle',
         'Magnify',
         'CalibrationLine',
@@ -245,9 +245,9 @@ function modeFactory({ modeConfiguration }) {
           return {
             id: ohif.layout,
             props: {
-              leftPanels: [tracked.thumbnailList],
+              leftPanels: [tracked.measurements],
               leftPanelResizable: true,
-              rightPanels: [cornerstone.segmentation, tracked.measurements],
+              rightPanels: [cornerstone.segmentation, tracked.thumbnailList],
               rightPanelClosed: true,
               rightPanelResizable: true,
               viewports: [
